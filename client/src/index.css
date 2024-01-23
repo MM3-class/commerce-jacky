@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  @variants responsive {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+  }
+}
+
+@layer components {
+  .section {
+    margin: 70px auto;
+    padding: 22px 0;
+  }
+  .title {
+    font-size: 2rem;
+    line-height: 72px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: .5rem;
+    color: #DB4444;
+  }
+  .title::before {
+    content: "";
+    border-left: 1rem solid #DB4444;
+    border-radius: 5px;
+    margin-right: .5rem;
+  }
+  .sub-title {
+    font-weight: 600;
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+  }
+  .viewAll {
+    color: #fff;
+    background-color: #DB4444;
+    padding: 16px 48px;
+    border-radius: 12px;
+    transition-duration: 500ms;
+  }
+  .viewAll:hover {
+    opacity: .9;
+  }
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html {
+  scroll-behavior: smooth !important;
+}
+/* Custom React-Slick home */
+.home {
+  height: 14px;
+  width: 14px;
+  background-color: #A5A6F6;
+  border-radius: 50%;
+  position: relative;
+}
+.slick-dots li {
+  position: absolute;
+  top: -50px;
+  margin: 0 2px;
+}
+.slick-dots .slick-active .home {
+  background-color: #DB4444;
+  border: solid #fff thin;
+}
+.toggle {
+  display: none;
+}
