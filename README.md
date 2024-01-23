@@ -34,4 +34,4 @@ The project follows a modular structure to enhance maintainability and scalabili
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/MM3-class/jacky-commerce.git
+   git clone https://github.com/MM3-class/commerce-jacky.git
