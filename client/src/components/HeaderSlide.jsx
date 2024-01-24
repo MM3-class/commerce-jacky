@@ -24,7 +24,7 @@ const HeaderSlide = () => {
     <div>
       <Slider {...settings}>
         {wallpaper.map((item) => (
-          <div className='lg:h-[calc(100vh-350px)] xl:h-[calc(100vh-180px)] w-full' key={uuid()}>
+          <div className='lg:h-[calc(100vh-150px)] xl:h-[calc(100vh-180px)] w-full' key={uuid()}>
             <img className='h-full w-full object-cover' src={item} alt={item} />
           </div>
         ))}

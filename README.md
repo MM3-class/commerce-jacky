@@ -1,4 +1,4 @@
-Welcome to the E-Commerce project repository! This project is built using React and Redux, along with several other libraries and tools. It aims to provide a feature-rich e-commerce platform with a focus on a seamless user experience.
+Welcome to the E-Commerce project repository! This project is built using React and Redux, along with several other libraries and tools. It aims to provide a feature-rich e-commerce platform with a focus on a seamless user experience and dynamically no stock no render item and then stock less than 10 Pcs render warning message .
 
 ## Technologies Used
 
@@ -14,7 +14,8 @@ Welcome to the E-Commerce project repository! This project is built using React 
 - **React UUID**: A library for generating unique identifiers.
 - **React Toastify**: A notification library for React applications.
 - **Persist Hook**: A hook for persisting state in React applications.
-- **Closure Function**: Used for calculating the total amount, considering discounts, shipping costs, and free shipping.
+- **Closure Function**: Used for calculating the total amount, considering discounts, shipping costs, and free shipping. 
+-**Dynamic**: dynamically no stock no render item and then stock less than 10 Pcs render warning message
 
 ## Project Structure
 
@@ -35,3 +36,4 @@ The project follows a modular structure to enhance maintainability and scalabili
 
    ```bash
    git clone https://github.com/MM3-class/commerce-jacky.git
+   ```

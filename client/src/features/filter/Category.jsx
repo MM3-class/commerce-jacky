@@ -22,8 +22,8 @@ const GetCategory = () => {
 
     return (
         <div>
-            <h1 className='title text-4xl'>Category</h1>
-            <p className='text-2xl tracking-wide mt-6'>Result is <span className='text-md font-semibold tracking-wider'>{path}</span></p>
+            <h1 className='lg:title font-medium text-secondary'>Category</h1>
+            <p className='md:text-2xl tracking-wide my-2 md:mt-6'>Result is <span className='text-md font-semibold tracking-wider'>{path}</span></p>
             <div>
                 {isLoading ?
                     (<SkeletonHorizontalCard data={categoryData} />) :

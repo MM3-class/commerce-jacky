@@ -27,14 +27,14 @@ const Header = ({ isOpen, setIsOpen }) => {
         setIsOpen(false)
     }
     return (
-        <div className="flex justify-between items-center py-6 mb-8 border-b shadow-sm md:px-16 px-2 ">
+        <div className="flex justify-between items-center py-2 lg:py-6 mb-8 border-b shadow-sm md:px-16 px-2 ">
             <div onClick={() => navigate('/')} className=" cursor-pointer">
                 <span className="font-semibold text-secondary">Jacky</span>
                 <img className="pb-2 w-10" src={jackyIcon} alt="icon" />
             </div>
             <nav
                 ref={navRef}
-                className={`lg:space-x-4 lg:w-auto lg:static lg:text-text2 lg:bg-white lg:flex lg:flex-row xl:text-lg flex flex-col w-[100%] space-x-0 px-8 bg-text1 text-white absolute right-0 top-20 z-10 ${!isOpen && "hidden"}`}>
+                className={`lg:space-x-4 lg:w-auto lg:static lg:text-text2 lg:bg-white lg:flex lg:flex-row xl:text-lg flex flex-col w-[100%] space-x-0 px-8 bg-black opacity-80 text-white absolute right-0 top-20 z-10 ${!isOpen && "hidden"}`}>
                 <NavLink onClick={toggleMenu} className="focus:text-black lg:aria-[current=page]:border-b aria-[current=page]:border-button2 p-2 hover:opacity-50" to="/">Home</NavLink>
                 <NavLink onClick={toggleMenu} className="focus:text-black lg:aria-[current=page]:border-b aria-[current=page]:border-button2 p-2 hover:opacity-50" to="/contact">Contact</NavLink>
                 <NavLink onClick={toggleMenu} className="focus:text-black lg:aria-[current=page]:border-b aria-[current=page]:border-button2 p-2 hover:opacity-50" to="/about">About</NavLink>

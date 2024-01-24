@@ -13,7 +13,7 @@ const Card = ({ product }) => {
     const favoriteItem = useSelector(selectFavorite)
     const isFavorite = favoriteItem.some(item => item.id === id)
     return (
-        <div className='relative group'>
+        <div className='relative group m-auto md:m-0'>
             {stock && (
                 <div>
                     <Link to={`/product/${id}`} className='mx-auto my-4 transition-opacity duration-300 max-sm:text-xs'>
@@ -31,7 +31,12 @@ const Card = ({ product }) => {
                                 rating >= item ?
                                     <StarFill key={uuid()} className='text-yellow-500' /> :
                                     <StarFill key={uuid()} className='text-gray-400' />
-                            ))} <span>({rating})</span> <span className='text-green-700 whitespace-nowrap'>in stock</span></p>
+                            ))} <span>({rating})</span>
+                                <span>{stock > 10 ?
+                                    (<span className="text-green-700"> in stock</span>) :
+                                    (<span className="text-secondary bg-red-300 px-4 py-[2px] font-semibold">{stock} left</span>)}
+                                </span>
+                            </p>
                         </div>
                     </Link>
                 </div>
@@ -50,7 +55,7 @@ const Card = ({ product }) => {
             )}
             <Button
                 onClick={() => dispatch(addToCart({ id, title, price, stock, thumbnail }))}
-                className='absolute bottom-[100px] p-2 w-[270px] bg-text2 text-white text-center pointer-events-auto invisible group-hover:visible active:bg-gray-700'>Add to Cart</Button>
+                className='absolute bottom-[80px] md:bottom-[100px] p-2 w-[200px] md:w-[270px] bg-text2 text-white text-center pointer-events-auto invisible group-hover:visible active:bg-gray-700'>Add to Cart</Button>
         </div>
 
     )
